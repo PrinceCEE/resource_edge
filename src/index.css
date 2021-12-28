@@ -37,10 +37,6 @@ nav > div,
   margin: auto;
 }
 
-/* main {
-  margin-top: 80px;
-} */
-
 nav {
   position: sticky;
   top: 0;
@@ -92,6 +88,6 @@ nav button.sign-in {
   border-radius: 4px;
 }
 
-nav button.sign-in:hover {
+button.sign-in:hover {
   background-color: var(--primary-hover);
 }

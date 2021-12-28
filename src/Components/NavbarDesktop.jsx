@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 import Button from "./Button";
 
 const NavbarDesktop = () => {
+  const navigate = useNavigate();
+
   return (
     <nav>
       <div>
@@ -20,7 +23,14 @@ const NavbarDesktop = () => {
         </ul>
         <div>
           <Button className="sign-up">Sign up</Button>
-          <Button className="sign-in">Sign in</Button>
+          <Button
+            className="sign-in"
+            handleClick={() => {
+              navigate("/login");
+            }}
+          >
+            Sign in
+          </Button>
         </div>
       </div>
     </nav>

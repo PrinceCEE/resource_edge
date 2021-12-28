@@ -8,20 +8,16 @@ import NavbarDesktop from "../Components/NavbarDesktop";
 
 const Routes = () => {
   return (
-    <>
-      <NavbarDesktop />
-      <main>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" element={<HomePage />} index />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/change_password" element={<ChangePassword />} />
-            <Route path="/reset_password" element={<ResetPassword />} />
-          </Switch>
-        </BrowserRouter>
-      </main>
-    </>
+    <BrowserRouter>
+      {/* <NavbarDesktop /> */}
+      <Switch>
+        <Route path="/" element={<HomePage />} index />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/change_password" element={<ChangePassword />} />
+        <Route path="/reset_password" element={<ResetPassword />} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 

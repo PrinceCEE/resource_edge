@@ -1,6 +1,6 @@
 const Input = ({ label, isPassword, placeholder }) => {
   return (
-    <div>
+    <div className="input-container">
       <label>{label}</label>
       <input
         type={isPassword ? "password" : "text"}
