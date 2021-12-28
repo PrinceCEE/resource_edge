@@ -1,0 +1,86 @@
+.auth-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+  gap: var(--space50);
+  background-image: url("../../assets/auth_bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-color: #fafbfc;
+}
+
+.auth-screen .authcard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 8px;
+  padding: 40px 30px;
+  background-color: white;
+  box-shadow: 0px 8px 12px rgba(9, 30, 66, 0.15),
+    0px 0px 1px rgba(9, 30, 66, 0.31);
+  width: 450px;
+}
+
+.auth-screen .authcard > div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.auth-screen .authcard > div:first-of-type > * {
+  text-align: center;
+}
+
+.auth-screen .authcard > div:first-of-type h2 {
+  color: #091e42;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.auth-screen .authcard > div:first-of-type p {
+  line-height: 20px;
+  font-size: 14px;
+  color: #42526e;
+}
+
+.auth-screen .authcard .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-screen .authcard .input-container input {
+  border-radius: 4px;
+  border: 1px solid #dfe1e6;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20.02px;
+}
+
+.auth-screen .authcard button.login {
+  background-color: var(--primary);
+  border-radius: 4px;
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.auth-screen .authcard hr {
+  border-top: 1px solid #dfe1e6;
+}
+
+.auth-screen .authcard div:last-of-type div:last-of-type {
+  text-align: center;
+}
+
+.auth-screen .authcard a {
+  width: max-content;
+  text-decoration: none;
+  color: #0052cc;
+}
