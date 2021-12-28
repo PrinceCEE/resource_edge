@@ -7,15 +7,17 @@ import Login from "../features/Auth/Login";
 
 const Routes = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" element={<HomePage />} index />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/change_password" element={<ChangePassword />} />
-        <Route path="/reset_password" element={<ResetPassword />} />
-      </Switch>
-    </BrowserRouter>
+    <div className="container">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" element={<HomePage />} index />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/change_password" element={<ChangePassword />} />
+          <Route path="/reset_password" element={<ResetPassword />} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 };
 

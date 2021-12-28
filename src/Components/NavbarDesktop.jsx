@@ -4,18 +4,16 @@ import Button from "./Button";
 const NavbarDesktop = () => {
   return (
     <nav>
+      <ul>
+        <li>
+          <img src={logo} alt="Logo" />
+        </li>
+        <li>features</li>
+        <li>about</li>
+      </ul>
       <div>
-        <ul>
-          <li>
-            <img src={logo} alt="Logo" />
-          </li>
-          <li>features</li>
-          <li>about</li>
-        </ul>
-        <div>
-          <Button>sign up</Button>
-          <Button>sign in</Button>
-        </div>
+        <Button>sign up</Button>
+        <Button>sign in</Button>
       </div>
     </nav>
   );

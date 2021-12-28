@@ -1,4 +1,4 @@
-import styles from "./Homepage.module.css";
+import "./Homepage.css";
 import headerImage from "../../assets/header_image.svg";
 import employeeManagementImage from "../../assets/Employee_management.svg";
 import performanceManagenetImage from "../../assets/Perfomance_management.svg";
@@ -25,9 +25,7 @@ import Card from "../../Components/Card";
 const Homepage = () => {
   return (
     <div>
-      <header>
-        <NavbarDesktop />
-      </header>
+      <NavbarDesktop />
       <section>
         <div>
           <div>

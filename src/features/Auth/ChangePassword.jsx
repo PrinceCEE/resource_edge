@@ -1,4 +1,4 @@
-import styles from "./ChangePassword.module.css";
+import "./ChangePassword.css";
 import authLogo from "../../assets/auth_logo.svg";
 import Input from "./Components/Input";
 import Button from "../../Components/Button";
