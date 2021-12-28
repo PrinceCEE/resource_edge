@@ -4,16 +4,24 @@ import Button from "./Button";
 const NavbarDesktop = () => {
   return (
     <nav>
-      <ul>
-        <li>
-          <img src={logo} alt="Logo" />
-        </li>
-        <li>features</li>
-        <li>about</li>
-      </ul>
       <div>
-        <Button>sign up</Button>
-        <Button>sign in</Button>
+        <ul>
+          <li>
+            <a href="/">
+              <img src={logo} alt="Logo" />
+            </a>
+          </li>
+          <li>
+            <a href="#">features</a>
+          </li>
+          <li>
+            <a href="#">about</a>
+          </li>
+        </ul>
+        <div>
+          <Button className="sign-up">Sign up</Button>
+          <Button className="sign-in">Sign in</Button>
+        </div>
       </div>
     </nav>
   );

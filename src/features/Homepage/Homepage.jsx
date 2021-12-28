@@ -19,14 +19,12 @@ import fb from "../../assets/fb.svg";
 import instagram from "../../assets/instagram.svg";
 import linkedin from "../../assets/linkedin.svg";
 import twitter from "../../assets/twitter.svg";
-import NavbarDesktop from "../../Components/NavbarDesktop";
 import Card from "../../Components/Card";
 
 const Homepage = () => {
   return (
     <div>
-      <NavbarDesktop />
-      <section>
+      <section className="header">
         <div>
           <div>
             <h3>Throw paperwork into the trash where it belongs.</h3>
