@@ -6,34 +6,30 @@ import AuthCard from "./Components/AuthCard";
 
 const ResetPassword = () => {
   return (
-    <div>
+    <div className="auth-screen">
       <div>
-        <img src={authLogo} alt="Resource Edge" />
+        <a href="/">
+          <img src={authLogo} alt="Resource Edge" />
+        </a>
       </div>
       <AuthCard>
         <div>
+          <h2>Reset Password</h2>
+          <p>The password should have at least 6 characters</p>
+        </div>
+        <div>
+          <Input placeholder="Enter password" label="New Password" isPassword />
+          <Input
+            placeholder="Confirm password"
+            label="Confirm password"
+            isPassword
+          />
+          <Button handleClick={() => {}}>Reset Password</Button>
+          <hr />
           <div>
-            <h2>Reset Password</h2>
-            <p>The password should have at least 6 characters</p>
-          </div>
-          <div>
-            <Input
-              placeholder="Enter password"
-              label="New Password"
-              isPassword
-            />
-            <Button>Reset Password</Button>
-          </div>
-          <div>
-            <Input
-              placeholder="Confirm password"
-              label="Confirm password"
-              isPassword
-            />
-            <Button>Reset Password</Button>
+            <a href="/login">Back to login</a>
           </div>
         </div>
-        <a href="/login">Back to login</a>
       </AuthCard>
     </div>
   );

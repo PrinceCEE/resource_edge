@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import authLogo from "../../assets/auth_logo.svg";
 import Input from "./Components/Input";
@@ -5,6 +6,8 @@ import Button from "../../Components/Button";
 import AuthCard from "./Components/AuthCard";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="auth-screen">
       <div>
@@ -19,7 +22,14 @@ const Login = () => {
         </div>
         <div>
           <Input placeholder="Enter email" label="Email Address" />
-          <Button className="login">Continue</Button>
+          <Button
+            className="login"
+            handleClick={() => {
+              navigate("/dashboard");
+            }}
+          >
+            Continue
+          </Button>
           <hr />
           <div>
             <a href="/change_password">Forgot password?</a>

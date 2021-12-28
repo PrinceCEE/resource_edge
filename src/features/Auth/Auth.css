@@ -62,13 +62,17 @@
   line-height: 20.02px;
 }
 
-.auth-screen .authcard button.login {
+.auth-screen .authcard button {
   background-color: var(--primary);
   border-radius: 4px;
   padding: 10px 12px;
   border: none;
   cursor: pointer;
   color: white;
+}
+
+.auth-screen .authcard button:hover {
+  background-color: var(--primary-hover);
 }
 
 .auth-screen .authcard hr {
