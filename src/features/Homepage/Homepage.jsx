@@ -24,8 +24,8 @@ import Card from "../../Components/Card";
 const Homepage = () => {
   return (
     <div>
-      <section className="header">
-        <div>
+      <section id="header">
+        <div className="container">
           <div>
             <h3>Throw paperwork into the trash where it belongs.</h3>
             <p>
@@ -38,125 +38,115 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>human resources</h1>
-          <p>
-            Onboard new employees, manage the employee lifecycle and measure
-            employee performance.
-          </p>
-        </div>
-        <div>
-          <Card
-            logo={employeeManagementImage}
-            title="Employee Management"
-            content="From Hiring and Onboarding to Retiring, the Resource Edge Employee Management module eliminates all the complexities & paperwork involved in managing your team."
-          />
-          <Card
-            logo={performanceManagenetImage}
-            title="Performance Management"
-            content="Manage and track employee performance with our easy-to-use tools for goal setting, performance agreements and performance reviews."
-          />
-          <Card
-            logo={paidTimeOffImage}
-            title="Paid time off"
-            content="Employees can request for paid time off, vacations, sick leaves or educational leaves and get approvals all within Resource Edge. HR managers can equally ensure compliance."
-          />
-        </div>
-        <div>
-          <img src={employeeDirectoryImage} alt="Employee directory image" />
-        </div>
-      </section>
-      <section>
-        <div>
+      <section id="human-resources">
+        <div className="container">
           <div>
-            <h1>Admin and Logistics</h1>
+            <h1>human resources</h1>
             <p>
-              Manage and track company assets as well as logistics for
-              travelling employees.
+              Onboard new employees, manage the employee lifecycle and measure
+              employee performance.
             </p>
           </div>
-          <div>
-            <div>
-              <div>
-                <img src={travelLogisticsLogo} alt="Travel logistics logo" />
-              </div>
-              <div>
-                <h2>Travel & Logistics</h2>
-                <p>
-                  Make travel requests, get approvals, and have access to travel
-                  information.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <img src={assetManagementImage} alt="Asset management logo" />
-              </div>
-              <div>
-                <h2>Travel & Logistics</h2>
-                <p>
-                  Make travel requests, get approvals, and have access to travel
-                  information.
-                </p>
-              </div>
-            </div>
+          <div className="card-container">
+            <Card
+              className="card"
+              logo={employeeManagementImage}
+              title="Employee Management"
+              content="From Hiring and Onboarding to Retiring, the Resource Edge Employee Management module eliminates all the complexities & paperwork involved in managing your team."
+              alt="Employee Management"
+            />
+            <Card
+              className="card"
+              logo={performanceManagenetImage}
+              title="Performance Management"
+              content="Manage and track employee performance with our easy-to-use tools for goal setting, performance agreements and performance reviews."
+              alt="Performance Management"
+            />
+            <Card
+              className="card"
+              logo={paidTimeOffImage}
+              title="Paid time off"
+              content="Employees can request for paid time off, vacations, sick leaves or educational leaves and get approvals all within Resource Edge. HR managers can equally ensure compliance."
+              alt="Paid time off"
+            />
           </div>
-        </div>
-        <div>
-          <img src={travelLogisticsImage} alt="Travel logistics" />
+          <div>
+            <img src={employeeDirectoryImage} alt="Employee directory image" />
+          </div>
         </div>
       </section>
-      <section>
-        <div>
-          <div>
-            <h1>Finance</h1>
-            <p>
-              Generate invoices, track expenditure, and manage complex payrolls
-              for multiple teams and companies
-            </p>
-          </div>
+      <section id="admin-logistics">
+        <div className="container">
           <div>
             <div>
-              <div>
-                <img src={reVouchersImage} alt="RE vouchers" />
-              </div>
-              <div>
-                <h2>RE Vouchers</h2>
-                <p>
-                  Track and manage expenditure for multiple teams across your
-                  organisation using Resource Edge Vouchers.
-                </p>
-              </div>
+              <h1>Admin and Logistics</h1>
+              <p>
+                Manage and track company assets as well as logistics for
+                travelling employees.
+              </p>
             </div>
             <div>
-              <div>
-                <img src={payrollLogo} alt="Payroll logo" />
-              </div>
-              <div>
-                <h2>Payroll</h2>
-                <p>
-                  Our easy to use systems takes away the pain of managing
-                  complex payrolls for organisations of all sizes.
-                </p>
-              </div>
+              <Card
+                className="card"
+                logo={travelLogisticsLogo}
+                title="Travel & Logistics"
+                content="Make travel requests, get approvals, and have access to travel information."
+                alt="Travel logistics logo"
+              />
+              <Card
+                logo={assetManagementImage}
+                alt="Asset management logo"
+                title="Asset Management"
+                content="Manage the acquisition, assignment, and disposition of assets seamlessly."
+                className="card"
+              />
             </div>
           </div>
-        </div>
-        <div>
-          <img src={payrollImage} alt="Payroll Image" />
+          <div>
+            <img src={travelLogisticsImage} alt="Travel logistics" />
+          </div>
         </div>
       </section>
-      <section>
-        <div>
-          <img src={unnImage} alt="UNN" />
-          <img src={teneceImage} alt="Tenece" />
-          <img src={privateEstatesImage} alt="Private Estates" />
-          <img src={genesysImage} alt="Genesys" />
+      <section id="finance">
+        <div className="container">
+          <div>
+            <div>
+              <h1>Finance</h1>
+              <p>
+                Generate invoices, track expenditure, and manage complex
+                payrolls for multiple teams and companies
+              </p>
+            </div>
+            <div>
+              <Card
+                logo={reVouchersImage}
+                alt="RE vouchers"
+                title="RE Vouchers"
+                content="Track and manage expenditure for multiple teams across your organisation using Resource Edge Vouchers."
+                className="card"
+              />
+              <Card
+                logo={payrollLogo}
+                alt="Payroll logo"
+                title="Payroll"
+                content="Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes."
+                className="card"
+              />
+            </div>
+          </div>
+          <div>
+            <img src={payrollImage} alt="Payroll Image" />
+          </div>
         </div>
+      </section>
+      <section className="container" id="company-logos">
+        <img src={unnImage} alt="UNN" />
+        <img src={teneceImage} alt="Tenece" />
+        <img src={privateEstatesImage} alt="Private Estates" />
+        <img src={genesysImage} alt="Genesys" />
       </section>
       <footer>
-        <div>
+        <div className="container">
           <div>
             <div>
               <img src={footerLogo} alt="Footer resource logo" />
@@ -170,7 +160,7 @@ const Homepage = () => {
               <img src={linkedin} alt="LinkedIn" />
               <img src={instagram} alt="Instagram" />
             </div>
-            <p>Copyright &copy; Genesys DevStudio . All rights reserved</p>
+            <p>Copyright &copy; Genesys DevStudio. All rights reserved</p>
           </div>
         </div>
       </footer>

@@ -1,6 +1,10 @@
 :root {
   --primary: #0052cc;
   --primary-hover: #0065ff;
+  --default-black: #091e42;
+  --neutral: #5e6c84;
+  --space50: 50px;
+  --footer-color: #091e42;
 }
 
 body {
@@ -27,21 +31,19 @@ li {
   list-style-type: none;
 }
 
-main,
-nav > div {
+nav > div,
+.container {
   width: 80%;
   margin: auto;
 }
 
-main {
+/* main {
   margin-top: 80px;
-}
+} */
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
-  right: 0;
-  left: 0;
   width: 100%;
   background-color: white;
 }
@@ -60,7 +62,7 @@ nav ul {
 
 nav ul a {
   text-decoration: none;
-  color: black;
+  color: var(--default-black);
   text-transform: capitalize;
   font-size: 16px;
   line-height: 24px;
