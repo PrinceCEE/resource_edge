@@ -1,0 +1,175 @@
+#header .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 100px 0;
+}
+
+#header .container div:first-of-type {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#header .container div:last-of-type {
+  width: 54%;
+}
+
+#header h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57.6px;
+  color: var(--default-black);
+}
+
+#header p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#header .container div:last-of-type img {
+  width: 100%;
+}
+
+#human-resources,
+#admin-logistics {
+  padding-top: var(--space50);
+}
+
+#human-resources {
+  background-color: #f4f5f7;
+}
+
+#human-resources .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space50);
+}
+
+#human-resources .container h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+#human-resources .container h1 + p {
+  color: var(--neutral);
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 436px;
+}
+
+#human-resources .card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 20px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.card h5 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+  color: var(--default-black);
+}
+
+.card h5 + p {
+  font-size: 14px;
+  line-height: 20.3px;
+  color: var(--neutral);
+}
+
+#admin-logistics .container,
+#finance .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space50);
+}
+
+#admin-logistics .container > div:first-of-type,
+#finance .container > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#admin-logistics .container > div:first-of-type > *,
+#finance .container > div:first-of-type > * {
+  width: 45%;
+}
+
+#admin-logistics .container > div:first-of-type > div:last-of-type,
+#finance .container > div:first-of-type > div:last-of-type {
+  display: flex;
+}
+
+#admin-logistics .container h1,
+#finance .container h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64.8px;
+  color: var(--default-black);
+  margin-bottom: 20px;
+}
+
+#admin-logistics .container h1 + p,
+#finance .container h1 + p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--neutral);
+}
+
+section#company-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+
+footer {
+  background-color: var(--footer-color);
+  color: white;
+  padding: 30px;
+}
+
+footer > div.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > div.container div:first-of-type > p {
+  font-size: 18px;
+  line-height: 26.1px;
+}
+
+footer > div.container div:last-of-type > p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+footer > div.container div:last-of-type > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+footer > div.container div:last-of-type > div img {
+  cursor: pointer;
+}

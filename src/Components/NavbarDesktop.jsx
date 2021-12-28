@@ -7,14 +7,20 @@ const NavbarDesktop = () => {
       <div>
         <ul>
           <li>
-            <img src={logo} alt="Logo" />
+            <a href="/">
+              <img src={logo} alt="Logo" />
+            </a>
           </li>
-          <li>features</li>
-          <li>about</li>
+          <li>
+            <a href="#">features</a>
+          </li>
+          <li>
+            <a href="#">about</a>
+          </li>
         </ul>
         <div>
-          <Button>sign up</Button>
-          <Button>sign in</Button>
+          <Button className="sign-up">Sign up</Button>
+          <Button className="sign-in">Sign in</Button>
         </div>
       </div>
     </nav>

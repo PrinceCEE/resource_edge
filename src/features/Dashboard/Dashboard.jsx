@@ -1,12 +1,8 @@
-import styles from "./Dashboard.module.css";
-import NavbarDesktop from "../../Components/NavbarDesktop";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
     <div>
-      <header>
-        <NavbarDesktop />
-      </header>
       <main>
         <h1>Hello, Ositadinma Nwangwu</h1>
         <h4>Welcome and good to have you back</h4>

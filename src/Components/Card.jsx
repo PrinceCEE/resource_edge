@@ -1,11 +1,11 @@
-const Card = ({ logo, title, content }) => {
+const Card = ({ logo, title, content, className, alt }) => {
   return (
-    <div>
+    <div className={className}>
       <div>
-        <img src={logo} />
+        <img src={logo} alt={alt} />
       </div>
       <div>
-        <h2>{title}</h2>
+        <h5>{title}</h5>
         <p>{content}</p>
       </div>
     </div>
