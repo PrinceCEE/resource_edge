@@ -1,0 +1,92 @@
+.dashboard {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 40px;
+  margin-top: -100px !important;
+}
+
+main h1 {
+  color: #091e42;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+main h4 {
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15.96px;
+}
+
+main h3 {
+  color: #172b4d;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+
+main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: 600px;
+}
+
+main ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  cursor: pointer;
+}
+
+main ul li > div > p {
+  display: inline-block;
+}
+
+main ul li > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main ul li > div > span {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  display: inline-block;
+}
+
+main ul li button {
+  border: none;
+  cursor: pointer;
+}
+
+main ul li button.begin {
+  color: #0052cc;
+  background-color: white;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+main ul li button.resume {
+  color: #42526e;
+  background-color: white;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: rgba(9, 30, 66, 0.04);
+  padding: 6px 12px;
+  border-radius: 3px;
+}
