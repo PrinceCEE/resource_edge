@@ -17,7 +17,7 @@ const Input = ({
         />
         {displayIcon && src && (
           <span>
-            <img src={src} alt="image" />
+            <img src={src} alt="images" />
           </span>
         )}
       </div>
