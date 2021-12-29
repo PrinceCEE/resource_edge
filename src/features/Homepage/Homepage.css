@@ -6,14 +6,15 @@
   padding: 50px 0 100px 0;
 }
 
-#header .container div:first-of-type {
+#header .container > div:first-of-type {
   width: 40%;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   gap: 25px;
 }
 
-#header .container div:last-of-type {
+#header .container > div:last-of-type {
   width: 54%;
 }
 
@@ -29,7 +30,11 @@
   line-height: 24px;
 }
 
-#header .container div:last-of-type img {
+#header .container > div:last-of-type img {
+  width: 100%;
+}
+
+.image-container img {
   width: 100%;
 }
 
@@ -65,6 +70,7 @@
 
 #human-resources .card-container {
   display: flex;
+  flex-wrap: nowrap;
   gap: 20px;
   justify-content: space-between;
 }
@@ -109,6 +115,7 @@
 #admin-logistics .container > div:first-of-type,
 #finance .container > div:first-of-type {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -121,6 +128,7 @@
 #admin-logistics .container > div:first-of-type > div:last-of-type,
 #finance .container > div:first-of-type > div:last-of-type {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #admin-logistics .container h1,
@@ -141,11 +149,20 @@
 
 section#company-logos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 50px;
   margin-bottom: 200px;
   margin-top: 100px;
+}
+
+section#company-logos div {
+  width: 24%;
+}
+
+section#company-logos div img {
+  width: 100%;
 }
 
 footer {
@@ -179,4 +196,133 @@ footer > div.container div:last-of-type > div {
 
 footer > div.container div:last-of-type > div img {
   cursor: pointer;
+}
+
+@media screen and (max-width: 771px) {
+  #header h3 {
+    font-size: 32px;
+    line-height: 40.6px;
+  }
+
+  #header p {
+    font-size: 14px;
+    line-height: 20.02px;
+  }
+
+  #admin-logistics .container > div:first-of-type,
+  #finance .container > div:first-of-type {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #admin-logistics .container > div:first-of-type > *,
+  #finance .container > div:first-of-type > * {
+    width: 100%;
+  }
+
+  #admin-logistics .container h1,
+  #finance .container h1 {
+    font-size: 32px;
+    line-height: 36.8px;
+  }
+
+  #admin-logistics .container h1 + p,
+  #finance .container h1 + p {
+    font-size: 14px;
+    line-height: 20.02px;
+  }
+
+  #admin-logistics .container > div:first-of-type > div:last-of-type,
+  #finance .container > div:first-of-type > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  section#company-logos {
+    margin-bottom: 100px;
+  }
+
+  section#company-logos div {
+    width: 40%;
+  }
+
+  section#company-logos div img {
+    width: 100%;
+  }
+
+  footer > div.container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer > div.container div:first-of-type {
+    text-align: center;
+  }
+
+  footer > div.container div:first-of-type img {
+    width: 164px;
+  }
+
+  footer > div.container div:first-of-type > p {
+    font-size: 16px;
+    line-height: 23.2px;
+  }
+
+  footer > div.container div:last-of-type > p {
+    font-size: 12px;
+    line-height: 15.96px;
+  }
+
+  footer > div.container div:last-of-type > div {
+    justify-content: center;
+  }
+
+  footer > div.container div:last-of-type > div img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #header .container > div {
+    width: 100% !important;
+  }
+
+  #human-resources .container h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  #human-resources .container h1 + p {
+    font-size: 14px;
+    line-height: 20.02px;
+  }
+
+  #human-resources .card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .card img {
+    width: 48px;
+  }
+
+  #admin-logistics .container > div:first-of-type > div:last-of-type,
+  #finance .container > div:first-of-type > div:last-of-type {
+    flex-direction: column;
+  }
 }
