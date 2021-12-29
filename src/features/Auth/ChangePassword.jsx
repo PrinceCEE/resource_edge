@@ -27,6 +27,7 @@ const ChangePassword = () => {
           </div>
           <div>
             <Input
+              value={email}
               placeholder="Enter email"
               label="Email Address"
               handleChange={(e) => {

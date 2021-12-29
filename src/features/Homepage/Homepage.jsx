@@ -37,7 +37,7 @@ const Homepage = () => {
               </p>
             </div>
             <div>
-              <img src={headerImage} alt="Header image" />
+              <img src={headerImage} alt="Header images" />
             </div>
           </div>
         </section>
@@ -76,7 +76,7 @@ const Homepage = () => {
             <div className="image-container">
               <img
                 src={employeeDirectoryImage}
-                alt="Employee directory image"
+                alt="Employee directory images"
                 className="image-sa"
               />
             </div>
@@ -149,7 +149,7 @@ const Homepage = () => {
               <div>
                 <img
                   src={payrollImage}
-                  alt="Payroll Image"
+                  alt="Payroll Images"
                   className="image-sa"
                 />
               </div>

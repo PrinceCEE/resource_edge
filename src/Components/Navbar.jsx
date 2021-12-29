@@ -64,10 +64,10 @@ const Navbar = ({ isDashboard }) => {
                 </a>
               </li>
               <li>
-                <a href="#">features</a>
+                <a href="/">features</a>
               </li>
               <li>
-                <a href="#">about</a>
+                <a href="/">about</a>
               </li>
             </ul>
             <div>
