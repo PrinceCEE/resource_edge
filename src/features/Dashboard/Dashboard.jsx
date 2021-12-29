@@ -1,11 +1,11 @@
-import NavbarDesktop from "../../Components/NavbarDesktop";
+import Navbar from "../../Components/Navbar";
 import Button from "../../Components/Button";
 import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <NavbarDesktop isDashboard />
+      <Navbar isDashboard />
       <main className="container">
         <div>
           <h1>Hello, Ositadinma Nwangwu</h1>

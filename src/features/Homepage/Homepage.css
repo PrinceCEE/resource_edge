@@ -92,6 +92,13 @@
   color: var(--neutral);
 }
 
+.logistics-finance {
+  background-image: url("../../assets/finance_bg.svg");
+  background-color: white;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
 #admin-logistics .container,
 #finance .container {
   display: flex;

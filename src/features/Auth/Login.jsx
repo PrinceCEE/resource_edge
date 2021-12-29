@@ -1,12 +1,22 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./Auth.css";
 import authLogo from "../../assets/auth_logo.svg";
 import Input from "./Components/Input";
 import Button from "../../Components/Button";
 import AuthCard from "./Components/AuthCard";
+import useLocalStorage from "../../app/useLocalStorage";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [credential] = useLocalStorage();
+  const [email, setEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(false);
+
+  if (credential) {
+    navigate("/dashboard");
+    return;
+  }
 
   return (
     <div className="auth-screen">
