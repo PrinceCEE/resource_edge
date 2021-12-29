@@ -1,15 +1,27 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 import menuIcon from "../assets/menu.svg";
-import menuMobile from "../assets/menu_mobile.svg";
-import closeIcon from "../assets/close.svg";
-import logoMobile from "../assets/logo_mobile.svg";
 import personIcon from "../assets/person_icon.png";
 import Button from "./Button";
 import NavbarMobile from "./NavbarMobile";
+import Dropdown from "./Dropdown";
+import employeeLogo from "../assets/Employee_logo.svg";
+import talentManageLogo from "../assets/Talent-manager_logo.svg";
 
 const Navbar = ({ isDashboard }) => {
   const navigate = useNavigate();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [useAs, setUseAs] = useState([
+    {
+      name: "talent manager",
+      src: talentManageLogo,
+    },
+    {
+      name: "employee",
+      src: employeeLogo,
+    },
+  ]);
 
   return (
     <nav>
@@ -27,9 +39,19 @@ const Navbar = ({ isDashboard }) => {
             <div className="vertical-line"></div>
             <h2>TM Dashboard</h2>
           </div>
-          <div className="person-icon-container">
+          <div
+            className="person-icon-container"
+            onClick={() => {
+              setIsDropdownOpen(!isDropdownOpen);
+            }}
+          >
             <img src={personIcon} alt="person icon" />
           </div>
+          <Dropdown
+            data={useAs}
+            showDropdown={isDropdownOpen}
+            setUseAs={setUseAs}
+          />
         </div>
       ) : (
         <>
