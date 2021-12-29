@@ -110,7 +110,7 @@ const Homepage = () => {
                   />
                 </div>
               </div>
-              <div>
+              <div className="image-container">
                 <img
                   src={travelLogisticsImage}
                   alt="Travel logistics"
@@ -157,10 +157,18 @@ const Homepage = () => {
           </section>
         </div>
         <section className="container" id="company-logos">
-          <img src={unnImage} alt="UNN" />
-          <img src={teneceImage} alt="Tenece" />
-          <img src={privateEstatesImage} alt="Private Estates" />
-          <img src={genesysImage} alt="Genesys" />
+          <div>
+            <img src={unnImage} alt="UNN" />
+          </div>
+          <div>
+            <img src={teneceImage} alt="Tenece" />
+          </div>
+          <div>
+            <img src={privateEstatesImage} alt="Private Estates" />
+          </div>
+          <div>
+            <img src={genesysImage} alt="Genesys" />
+          </div>
         </section>
         <footer>
           <div className="container">
