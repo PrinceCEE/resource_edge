@@ -4,12 +4,10 @@ import HomePage from "../features/Homepage/Homepage";
 import ChangePassword from "../features/Auth/ChangePassword";
 import ResetPassword from "../features/Auth/ResetPassword";
 import Login from "../features/Auth/Login";
-import NavbarDesktop from "../Components/NavbarDesktop";
 
 const Routes = () => {
   return (
     <BrowserRouter>
-      {/* <NavbarDesktop /> */}
       <Switch>
         <Route path="/" element={<HomePage />} index />
         <Route path="/dashboard" element={<Dashboard />} />

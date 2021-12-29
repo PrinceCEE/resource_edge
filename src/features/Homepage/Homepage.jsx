@@ -1,5 +1,5 @@
 import "./Homepage.css";
-import NavbarDesktop from "../../Components/NavbarDesktop";
+import Navbar from "../../Components/Navbar";
 import headerImage from "../../assets/header_image.svg";
 import employeeManagementImage from "../../assets/Employee_management.svg";
 import performanceManagenetImage from "../../assets/Perfomance_management.svg";
@@ -25,7 +25,7 @@ import Card from "../../Components/Card";
 const Homepage = () => {
   return (
     <>
-      <NavbarDesktop />
+      <Navbar />
       <div>
         <section id="header">
           <div className="container">
@@ -73,78 +73,89 @@ const Homepage = () => {
                 alt="Paid time off"
               />
             </div>
-            <div>
+            <div className="image-container">
               <img
                 src={employeeDirectoryImage}
                 alt="Employee directory image"
+                className="image-sa"
               />
             </div>
           </div>
         </section>
-        <section id="admin-logistics">
-          <div className="container">
-            <div>
+        <div className="logistics-finance">
+          <section id="admin-logistics">
+            <div className="container">
               <div>
-                <h1>Admin and Logistics</h1>
-                <p>
-                  Manage and track company assets as well as logistics for
-                  travelling employees.
-                </p>
+                <div>
+                  <h1>Admin and Logistics</h1>
+                  <p>
+                    Manage and track company assets as well as logistics for
+                    travelling employees.
+                  </p>
+                </div>
+                <div>
+                  <Card
+                    className="card"
+                    logo={travelLogisticsLogo}
+                    title="Travel & Logistics"
+                    content="Make travel requests, get approvals, and have access to travel information."
+                    alt="Travel logistics logo"
+                  />
+                  <Card
+                    logo={assetManagementImage}
+                    alt="Asset management logo"
+                    title="Asset Management"
+                    content="Manage the acquisition, assignment, and disposition of assets seamlessly."
+                    className="card"
+                  />
+                </div>
               </div>
               <div>
-                <Card
-                  className="card"
-                  logo={travelLogisticsLogo}
-                  title="Travel & Logistics"
-                  content="Make travel requests, get approvals, and have access to travel information."
-                  alt="Travel logistics logo"
-                />
-                <Card
-                  logo={assetManagementImage}
-                  alt="Asset management logo"
-                  title="Asset Management"
-                  content="Manage the acquisition, assignment, and disposition of assets seamlessly."
-                  className="card"
-                />
-              </div>
-            </div>
-            <div>
-              <img src={travelLogisticsImage} alt="Travel logistics" />
-            </div>
-          </div>
-        </section>
-        <section id="finance">
-          <div className="container">
-            <div>
-              <div>
-                <h1>Finance</h1>
-                <p>
-                  Generate invoices, track expenditure, and manage complex
-                  payrolls for multiple teams and companies
-                </p>
-              </div>
-              <div>
-                <Card
-                  logo={reVouchersImage}
-                  alt="RE vouchers"
-                  title="RE Vouchers"
-                  content="Track and manage expenditure for multiple teams across your organisation using Resource Edge Vouchers."
-                  className="card"
-                />
-                <Card
-                  logo={payrollLogo}
-                  alt="Payroll logo"
-                  title="Payroll"
-                  content="Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes."
-                  className="card"
+                <img
+                  src={travelLogisticsImage}
+                  alt="Travel logistics"
+                  className="image-sa"
                 />
               </div>
             </div>
-            <div>
-              <img src={payrollImage} alt="Payroll Image" />
+          </section>
+          <section id="finance">
+            <div className="container">
+              <div>
+                <div>
+                  <h1>Finance</h1>
+                  <p>
+                    Generate invoices, track expenditure, and manage complex
+                    payrolls for multiple teams and companies
+                  </p>
+                </div>
+                <div>
+                  <Card
+                    logo={reVouchersImage}
+                    alt="RE vouchers"
+                    title="RE Vouchers"
+                    content="Track and manage expenditure for multiple teams across your organisation using Resource Edge Vouchers."
+                    className="card"
+                  />
+                  <Card
+                    logo={payrollLogo}
+                    alt="Payroll logo"
+                    title="Payroll"
+                    content="Our easy to use systems takes away the pain of managing complex payrolls for organisations of all sizes."
+                    className="card"
+                  />
+                </div>
+              </div>
+              <div>
+                <img
+                  src={payrollImage}
+                  alt="Payroll Image"
+                  className="image-sa"
+                />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
         <section className="container" id="company-logos">
           <img src={unnImage} alt="UNN" />
           <img src={teneceImage} alt="Tenece" />
