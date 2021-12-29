@@ -29,11 +29,11 @@ const Navbar = ({ isDashboard }) => {
         <div className="nav-db">
           <div>
             <div className="menu-container">
-              <img src={menuIcon} />
+              <img src={menuIcon} alt="logo" />
             </div>
             <div>
               <a href="/">
-                <img src={logo} />
+                <img src={logo} alt="logo" />
               </a>
             </div>
             <div className="vertical-line"></div>
