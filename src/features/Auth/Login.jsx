@@ -5,18 +5,17 @@ import authLogo from "../../assets/auth_logo.svg";
 import Input from "./Components/Input";
 import Button from "../../Components/Button";
 import AuthCard from "./Components/AuthCard";
-import useLocalStorage from "../../app/useLocalStorage";
+import check from "../../assets/check_login.png";
+import edit from "../../assets/edit-filled.png";
+import watch from "../../assets/watch.png";
+// import useLocalStorage from "../../app/useLocalStorage";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [credential] = useLocalStorage();
-  const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
-
-  if (credential) {
-    navigate("/dashboard");
-    return;
-  }
+  const [addPassword, setAddPassword] = useState(false);
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
     <div className="auth-screen">
@@ -30,12 +29,59 @@ const Login = () => {
           <h2>Log in</h2>
           <p>Access your resource edge account</p>
         </div>
+        {addPassword && (
+          <div className="user-details">
+            <div>
+              <h4>Ositadinma Nwangwu</h4>
+              <p>{email}</p>
+            </div>
+            <div>
+              <img src={edit} alt="edit" />
+            </div>
+          </div>
+        )}
         <div>
-          <Input placeholder="Enter email" label="Email Address" />
+          {!addPassword && (
+            <Input
+              placeholder="Enter email"
+              label="Email Address"
+              src={check}
+              displayIcon={isEmailValid}
+              handleChange={(e) => {
+                if (
+                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+                    e.target.value
+                  )
+                ) {
+                  setIsEmailValid(true);
+                  setEmail(e.target.value);
+                } else {
+                  setIsEmailValid(false);
+                  return;
+                }
+              }}
+            />
+          )}
+          {addPassword && (
+            <Input
+              placeholder="Enter password"
+              label="Password"
+              isPassword
+              src={watch}
+              displayIcon
+              handleChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          )}
           <Button
-            className="login"
+            className={!isEmailValid && "disabled"}
+            isDisabled={!isEmailValid}
             handleClick={() => {
-              navigate("/dashboard");
+              password.length === 0 && setAddPassword(true);
+              if (password.length > 0) {
+                navigate("/dashboard");
+              }
             }}
           >
             Continue

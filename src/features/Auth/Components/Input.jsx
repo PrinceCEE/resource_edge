@@ -1,13 +1,26 @@
-const Input = ({ label, isPassword, placeholder, value, handleChange }) => {
+const Input = ({
+  label,
+  isPassword,
+  placeholder,
+  displayIcon,
+  handleChange,
+  src,
+}) => {
   return (
     <div className="input-container">
       <label>{label}</label>
-      <input
-        type={isPassword ? "password" : "text"}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-      />
+      <div>
+        <input
+          type={isPassword ? "password" : "text"}
+          placeholder={placeholder}
+          onChange={handleChange}
+        />
+        {displayIcon && src && (
+          <span>
+            <img src={src} />
+          </span>
+        )}
+      </div>
     </div>
   );
 };
