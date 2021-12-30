@@ -24,7 +24,15 @@ const SuccessCard = ({ text, reRoute }) => {
       <p>{text}</p>
       <hr />
       <div>
-        <a href="/login">Back to login</a>
+        <a
+          href="/login"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/login");
+          }}
+        >
+          Back to login
+        </a>
       </div>
     </AuthCard>
   );

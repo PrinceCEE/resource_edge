@@ -6,12 +6,14 @@ import Button from "../../Components/Button";
 import AuthCard from "./Components/AuthCard";
 import SuccessCard from "./Components/SuccessCard";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isSamePassword, setIsSamePassword] = useState(false);
   const [isError, setIsError] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="auth-screen">
@@ -67,7 +69,15 @@ const ResetPassword = () => {
             </Button>
             <hr />
             <div>
-              <a href="/login">Back to login</a>
+              <a
+                href="/login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/login");
+                }}
+              >
+                Back to login
+              </a>
             </div>
           </div>
         </AuthCard>

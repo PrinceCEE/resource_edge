@@ -5,10 +5,12 @@ import Button from "../../Components/Button";
 import AuthCard from "./Components/AuthCard";
 import SuccessCard from "./Components/SuccessCard";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ChangePassword = () => {
   const [email, setEmail] = useState("");
   const [canReceiveEmail, setCanReceiveEmail] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="auth-screen">
@@ -47,7 +49,15 @@ const ChangePassword = () => {
             </Button>
             <hr />
             <div>
-              <a href="/login">Back to login</a>
+              <a
+                href="/login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/login");
+                }}
+              >
+                Back to login
+              </a>
             </div>
           </div>
         </AuthCard>

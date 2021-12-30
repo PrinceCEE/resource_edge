@@ -89,7 +89,15 @@ const Login = () => {
           </Button>
           <hr />
           <div>
-            <a href="/change_password">Forgot password?</a>
+            <a
+              href="/change_password"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/change_password");
+              }}
+            >
+              Forgot password?
+            </a>
           </div>
         </div>
       </AuthCard>
