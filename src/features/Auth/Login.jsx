@@ -8,7 +8,6 @@ import AuthCard from "./Components/AuthCard";
 import check from "../../assets/check_login.png";
 import edit from "../../assets/edit-filled.png";
 import watch from "../../assets/watch.png";
-// import useLocalStorage from "../../app/useLocalStorage";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,11 +31,13 @@ const Login = () => {
         {addPassword && (
           <div className="user-details">
             <div>
-              <h4>Ositadinma Nwangwu</h4>
-              <p>{email}</p>
-            </div>
-            <div>
-              <img src={edit} alt="edit" />
+              <div>
+                <h4>Ositadinma Nwangwu</h4>
+                <p>{email}</p>
+              </div>
+              <div>
+                <img src={edit} alt="edit" />
+              </div>
             </div>
           </div>
         )}
