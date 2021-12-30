@@ -28,7 +28,12 @@
 .auth-screen .authcard > div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
+}
+
+.auth-screen .authcard > div > * {
+  width: 100%;
 }
 
 .auth-screen .authcard > div:first-of-type > * {
@@ -54,11 +59,12 @@
   gap: 10px;
 }
 
-.auth-screen .authcard div.user-details {
+.auth-screen .authcard div.user-details > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .auth-screen .authcard div.user-details img {
@@ -118,7 +124,8 @@
   border-top: 1px solid #dfe1e6;
 }
 
-.auth-screen .authcard div:last-of-type div:last-of-type {
+.auth-screen .authcard div:last-of-type div:last-of-type,
+.auth-screen .authcard .success-logo-container + p {
   text-align: center;
 }
 
@@ -126,4 +133,32 @@
   width: max-content;
   text-decoration: none;
   color: #0052cc;
+}
+
+.auth-screen .authcard .success-logo-container img {
+  max-height: 128px;
+  max-width: 128px;
+}
+
+.toggle-pwd {
+  cursor: pointer;
+}
+
+.error {
+  color: #de350b;
+  font-size: 12px;
+  line-height: 15.96px;
+  display: flex;
+  gap: 5px;
+  margin-top: -20px;
+}
+
+@media screen and (max-width: 600px) {
+  .auth-screen {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .auth-screen .authcard {
+    width: 80%;
+  }
 }

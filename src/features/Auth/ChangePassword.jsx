@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import authLogo from "../../assets/auth_logo.svg";
 import Input from "./Components/Input";
@@ -8,7 +7,6 @@ import SuccessCard from "./Components/SuccessCard";
 import { useState } from "react";
 
 const ChangePassword = () => {
-  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [canReceiveEmail, setCanReceiveEmail] = useState(false);
 
@@ -31,19 +29,18 @@ const ChangePassword = () => {
               placeholder="Enter email"
               label="Email Address"
               handleChange={(e) => {
-                if (
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-                    e.target.value
-                  )
-                ) {
-                  setEmail(e.target.value);
-                }
+                setEmail(e.target.value);
               }}
             />
             <Button
               handleClick={() => {
-                setCanReceiveEmail(true);
-                navigate("/reset_password");
+                if (
+                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+                    email
+                  )
+                ) {
+                  setCanReceiveEmail(true);
+                }
               }}
             >
               Send Recovery Link
@@ -55,7 +52,12 @@ const ChangePassword = () => {
           </div>
         </AuthCard>
       )}
-      {canReceiveEmail && <SuccessCard />}
+      {canReceiveEmail && (
+        <SuccessCard
+          text="A recovery email has been sent to your email address."
+          reRoute
+        />
+      )}
     </div>
   );
 };
